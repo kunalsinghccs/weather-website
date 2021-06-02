@@ -21,7 +21,7 @@ const forecast = (longitude,latitude,callback)=>{
         }else if(response.body.message){
                 callback(response.body.message,undefined)
         }else{
-                callback(undefined,'Temprature is ' +response.body.main.temp+' c')
+                callback(undefined,'Temperature is ' +response.body.main.temp+' c, it feels like '+response.body.main.feels_like +' c' )
         }
     })
 }
